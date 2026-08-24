@@ -1,1 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+@layer base {
+  body {
+    @apply bg-cyber-dark text-white antialiased;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-cyber-red text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-red-700 hover:shadow-[0_0_30px_rgba(255,0,0,0.5)] hover:-translate-y-0.5;
+  }
+  .btn-secondary {
+    @apply border border-cyber-red text-cyber-red px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-cyber-red hover:text-white hover:shadow-[0_0_30px_rgba(255,0,0,0.3)];
+  }
+  .section-label {
+    @apply text-sm font-semibold uppercase tracking-widest text-cyber-red;
+  }
+  .section-heading {
+    @apply text-4xl md:text-5xl font-extrabold mt-2;
+  }
+  .cyber-card {
+    @apply bg-cyber-card border border-cyber-border rounded-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyber-red/50 hover:shadow-[0_0_30px_rgba(255,0,0,0.15)];
+  }
+}
